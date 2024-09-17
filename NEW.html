@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | SagesCraft Store</title>
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="./assets/Css/normalize.css" />
+    <!-- Css File-->
+    <link rel="stylesheet" href="./assets/Css/shop.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./assets/Css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+    <style>
+        .quantity-selector {
+            margin-top: 10px;
+            width: 50px;
+            padding: 5px;
+        }
+        .product-cart {
+            margin-top: 10px;
+        }
+        .order-summary {
+            clear: both;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px;
+        }
+        .order-summary h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Start Header -->
+    <div class="header">
+        <div class="container">
+            <a href="./index.html" class="logo">SagesCraft Store</a>
+            <div class="nav">
+                <!-- JS add Class: show -->
+                <ul class="nav-links" id="nav-links">
+                    <!-- JS add Class: active -->
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <div class="icon" id="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="cart" id="cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start shop-header -->
+    <div class="shop-header">
+        <div class="content">
+            <h1>SAGES Shop</h1>
+            <h3>Billing and Delivery for small up charge </h3>
+        </div>
+    </div>
+    <!-- End shop-header -->
+
+    <!-- Start features-products -->
+    <div class="features-products">
+        <div class="container">
+            <!-- Example Product with Quantity Selector -->
+            <div class="product">
+                <div class="img-container">
+                    <img src="./assets/images/products/f1.png" alt="Cartoon Astronraut T-Shirts" />
+                </div>
+                <div class="content">
+                    <p class="brand">NasheedPog</p>
+                    <h3 class="title">Resperation III</h3>
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="price">1 Diamond</span>
+                    <input type="number" class="quantity-selector" id="quantity-1" value="1" min="1">
+                    <div class="product-cart">
+                        <i class="fa-solid fa-cart-arrow-down" onclick="addToCart(1, 'Resperation III', 1)"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional Products -->
+            <div class="product">
+                <div class="img-container">
+                    <img src="./assets/images/products/f2.png" alt="Protection IV" />
+                </div>
+                <div class="content">
+                    <p class="brand">NasheedPog</p>
+                    <h3 class="title">Protection IV</h3>
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                    <span class="price">2 Diamond</span>
+                    <input type="number" class="quantity-selector" id="quantity-2" value="1" min="1">
+                    <div class="product-cart">
+                        <i class="fa-solid fa-cart-arrow-down" onclick="addToCart(2, 'Protection IV', 2)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img-container">
+                    <img src="./assets/images/products/f3.png" alt="Mending" />
+                </div>
+                <div class="content">
+                    <p class="brand">NasheedPog</p>
+                    <h3 class="title">Mending</h3>
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="price">2 Diamond</span>
+                    <input type="number" class="quantity-selector" id="quantity-3" value="1" min="1">
+                    <div class="product-cart">
+                        <i class="fa-solid fa-cart-arrow-down" onclick="addToCart(3, 'Mending', 2)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img-container">
+                    <img src="./assets/images/products/f4.png" alt="Aqua Affinity" />
+                </div>
+                <div class="content">
+                    <p class="brand">NasheedPog</p>
+                    <h3 class="title">Aqua Affinity</h3>
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                    <span class="price">1 Diamond</span>
+                    <input type="number" class="quantity-selector" id="quantity-4" value="1" min="1">
+                    <div class="product-cart">
+                        <i class="fa-solid fa-cart-arrow-down" onclick="addToCart(4, 'Aqua Affinity', 1)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="img-container">
+                    <img src="./assets/images/products/f5.png" alt="Unbreaking III" />
+                </div>
+              
+
+                <div class="content">
+                    <p class="brand">NasheedPog</p>
+                    <h3 class="title">Unbreaking III</h3>
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="price">2 Diamond</span>
+                    <input type="number" class="quantity-selector" id="quantity-5" value="1" min="1">
+                    <div class="product-cart">
+                        <i class="fa-solid fa-cart-arrow-down" onclick="addToCart(5, 'Unbreaking III', 2)"></i>
+                    </div>
+                </div>
+            </div>
+               <!-- mudule 
+            <div class="product">
+                <div class="img-container">
+                    <img src="./assets/images/products/f5.png" alt="Unbreaking III" />
+                </div>
+
+ <div class="content">
+    <p class="brand">NasheedPog</p>
+    <h3 class="title">Unbreaking III</h3>
+    <div class="rate">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+    </div>
+    <span class="price">2 Diamond</span>
+    <input type="number" class="quantity-selector" id="quantity-5" value="1" min="1">
+    <div class="product-cart">
+        <i class="fa-solid fa-cart-arrow-down" onclick="addToCart(5, 'Unbreaking III', 2)"></i>
+    </div>
+</div>
+</div>
+mudule -->
+            <!-- Add more products as needed -->
+        </div>
+    </div>
+    <!-- End features-products -->
+    <script>
+        let cart = []; // Cart array to store items
+
+        // Function to add a single product to the cart
+        function addToCart(id, name, price) {
+            const quantityInput = document.getElementById('quantity-' + id);
+            const quantity = parseInt(quantityInput.value, 10);
+
+            // Check if the item is already in the cart
+            const existingItem = cart.find(item => item.id === id);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+                existingItem.totalPrice = existingItem.quantity * existingItem.unitPrice;
+            } else {
+                cart.push({
+                    id,
+                    name,
+                    quantity,
+                    unitPrice: price,
+                    totalPrice: quantity * price
+                });
+            }
+
+            // Update the order summary
+            updateOrderSummary();
+        }
+
+        // Function to update the order summary
+        function updateOrderSummary() {
+            const orderList = document.getElementById('order-list');
+            const totalPriceElement = document.getElementById('total-price');
+            let totalPrice = 0;
+
+            // Clear existing list
+            orderList.innerHTML = '';
+
+            // Add each item to the list
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - ${item.quantity} x ${item.unitPrice.toFixed(2)}diamond = ${item.totalPrice.toFixed(2)}diamond`;
+                orderList.appendChild(listItem);
+                totalPrice += item.totalPrice;
+            });
+
+            // Update total price display
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+        }
+
+        // Function to place an order
+        function placeOrder() {
+            if (cart.length === 0) {
+                alert('Your cart is empty.');
+                return;
+            }
+            alert('Order placed successfully!');
+            cart = []; // Clear cart
+            updateOrderSummary(); // Update summary after clearing cart
+        }
+    </script>
+    <!-- Start footer -->
+    <div class="order-summary" id="order-summary">
+        <h2>Order Summary</h2>
+        <ul id="order-list"></ul>
+        <p>Total: <span id="total-price">0.00</span>Diamond</p>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <div class="contact">
+                <a href="./index.html" class="logo">SagesCraft Store</a>
+                <div class="info">
+                    <h4>Contact</h4>
+                    <p><span>Address:</span> Shopping District</p>
+                    <p><span>Phone:</span> +6969696964</p>
+                </div>
+                <div class="follow">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            <div class="box">
+                <h4>About</h4>
+                <ul class="menu">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Delivery Info</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h4>My Account</h4>
+                <ul>
+                    <li><a href="">Sign In</a></li>
+                    <li><a href="">View cart</a></li>
+                    <li><a href="">My Wishlist</a></li>
+                    <li><a href="">Track My Order</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+    <!-- End footer -->
+
+
+   
+</body>
+</html>
